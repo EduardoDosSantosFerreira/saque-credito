@@ -1,0 +1,35 @@
+{
+  "name": "meu-projeto-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@coreui/bootstrap-vue": "^1.0.0-beta.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "bootstrap-vue-3": "^0.5.1",
+    "bootstrap-vue-next": "^0.17.2",
+    "font-awesome": "^4.7.0",
+    "swiper": "^11.2.6",
+    "vue": "^3.4.25",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0",
+    "vite-svg-loader": "^5.1.0",
+    "vue-cli-plugin-vuetify": "~2.5.8"
+  }
+}
