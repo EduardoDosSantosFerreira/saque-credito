@@ -86,7 +86,7 @@ export default {
 
 /* Textos */
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Aumentado de 3rem para 3.5rem */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -94,7 +94,7 @@ h1 {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Aumentado de 1.25rem para 1.5rem */
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -117,7 +117,7 @@ h4 {
 }
 
 .reviews-count {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Aumentado de 1rem para 1.2rem */
   color: #000000;
   font-weight: 500;
 }
@@ -127,8 +127,8 @@ h4 {
   background-color: #2ebc73;
   color: white;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 12px 24px;
+  font-size: 1.2rem; /* Aumentado de 1rem para 1.2rem */
+  padding: 14px 28px; /* Ajustado proporcionalmente */
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -153,7 +153,7 @@ h4 {
 
 .hero-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px; /* Aumentado de 500px para 600px */
   border-radius: 8px;
   transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
 }
@@ -182,16 +182,25 @@ h4 {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Aumentado de 2.5rem para 3rem */
   }
 
   h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* Aumentado de 1.1rem para 1.3rem */
+  }
+
+  .reviews-count {
+    font-size: 1.1rem; /* Aumentado proporcionalmente */
   }
 
   .cta-button {
     width: 100%;
     padding: 12px 0;
+    font-size: 1.1rem; /* Aumentado proporcionalmente */
+  }
+
+  .hero-image {
+    max-width: 450px; /* Ajustado para telas menores, mas ainda maior que o original */
   }
 }
 </style>

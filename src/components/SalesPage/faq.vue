@@ -45,7 +45,7 @@
             >
               <div class="px-4 pb-5 sm:px-6 sm:pb-6">
                 <p>
-                  {{ faq.answer }} <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline"></a>
+                  {{ faq.answer }} <a href="#" title="" class="text-green-600 transition-all duration-200 hover:underline"></a>
                 </p>
               </div>
             </div>
@@ -55,7 +55,7 @@
 
       <p class="text-center text-gray-600 textbase mt-9">
         Tem mais alguma dúvida?
-        <a href="https://api.whatsapp.com/send/?phone=5521983192355&text=Olá,%20gostaria%20de%20simular%20meu%20saldo%20FGTS!" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">
+        <a href="https://api.whatsapp.com/send/?phone=5521983192355&text=Olá,%20gostaria%20de%20simular%20meu%20saldo%20FGTS!" title="" class="font-medium text-green-600 transition-all duration-200 hover:text-green-700 focus:text-green-700 hover:underline">
           Fale conosco
         </a>
       </p>
@@ -71,24 +71,14 @@
 
     <p class="text-gray-700 text-sm leading-snug">
       A Saque Crédito não é uma instituição financeira e não efetua diretamente operações de crédito. A Saque Intermediação de Pagamentos e Negócios LTDA é uma plataforma digital que atua como correspondente bancário para facilitar serviços financeiros. 
-      <span v-if="expandir">
         Na qualidade de correspondente bancário, seguimos as diretrizes do Banco Central do Brasil, conforme a Resolução nº. 3.954, de 24 de fevereiro de 2011. Avaliações de crédito seguem a política da instituição financeira parceira. O cliente recebe todas as condições e informações antes da contratação. <br><br>
         A Saque Crédito não cobra valores diretamente dos clientes. Caso receba um contato suspeito solicitando pagamento, encerre imediatamente e nos informe para evitar fraudes.
-      </span>
     </p>
 
-    <button 
-      @click="expandir = !expandir" 
-      class="mt-3 text-green-600 font-semibold flex items-center hover:underline transition">
-      {{ expandir ? 'Mostrar menos' : 'Leia mais' }}
-      <font-awesome-icon :icon="expandir ? ['fas', 'angle-up'] : ['fas', 'angle-down']" class="ml-2"/>
-    </button>
   </div>
 </div>
 
   </section>
-  
-
   
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-green-500 py-10 text-center text-white">
-    <h1 class="text-4xl font-bold">Blog</h1>
+    <h1 class="text-4xl font-bold">Saiba Mais!</h1>
     <p class="text-lg">Conteúdo informativo e esclarecedor.</p>
   </div>
 
@@ -21,7 +21,7 @@
             <button
               class="bg-green-600 text-white px-6 py-2 text-sm rounded-full flex items-center justify-center shadow-md hover:bg-green-700 transition">
               <font-awesome-icon :icon="['fas', 'plus-circle']" class="mr-2" />
-              Ler mais
+              Saiba mais!
             </button>
           </div>
         </div>

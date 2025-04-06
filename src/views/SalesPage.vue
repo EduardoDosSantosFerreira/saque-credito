@@ -2,11 +2,10 @@
   <TheHeader />
   <HeroSection />
   <Faixa />
+  <sobre />
   <Services />
   <Steps />
   <requerimentos />
-  <servidor />
-  <Flutuantes />
   <Faq />
   <Footer />
 </template>
@@ -15,11 +14,10 @@
 import TheHeader from "../components/Global/TheHeader.vue";
 import HeroSection from "../components/SalesPage/HeroSection.vue";
 import Faixa from "../components/SalesPage/faixa.vue";
+import sobre from "../components/SalesPage/sobre.vue";
 import Services from "../components/SalesPage/services.vue";
 import Steps from "../components/SalesPage/Steps.vue";
 import requerimentos from "../components/SalesPage/requerimentos.vue";
-import servidor from "../components/SalesPage/servidor.vue";
-import Flutuantes from "../components/SalesPage/Flutuantes.vue";
 import Faq from "../components/SalesPage/faq.vue";
 import Footer from "../components/Global/footers.vue";
 
@@ -29,11 +27,10 @@ export default {
     TheHeader,
     HeroSection,
     Faixa,
+    sobre,
     Services,
     Steps,
     requerimentos,
-    servidor,
-    Flutuantes,
     Faq,
     Footer,
   },

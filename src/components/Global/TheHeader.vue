@@ -9,11 +9,10 @@
 
     <!-- Navegação Desktop -->
     <nav class="nav-desktop">
-      <a href="#" class="nav-link">Sobre nós</a>
-      <a href="#" class="nav-link">Como funciona?</a>
-      <a href="#" class="nav-link">Dúvidas</a>
-      <a href="#" class="nav-link">Seja Parceiro</a>
-      <a href="#" class="nav-link">Blog</a>
+      <a href="#sobre" class="nav-link">Sobre nós</a>
+      <a href="#funciona" class="nav-link">Como funciona?</a>
+      <a href="#faq-section" class="nav-link">Dúvidas</a>
+      <a href="#parceiro" class="nav-link">Seja Parceiro</a>
     </nav>
 
     <!-- Botão Destacado Desktop -->
@@ -32,7 +31,6 @@
       <a href="#" class="mobile-link">Como funciona?</a>
       <a href="#" class="mobile-link">Dúvidas</a>
       <a href="#" class="mobile-link">Seja Parceiro</a>
-      <a href="#" class="mobile-link">Blog</a>
       <a href="#" class="cta-button mobile-button">Solicite seu Crédito</a>
     </div>
   </header>
@@ -56,7 +54,7 @@ function toggleMenu() {
   justify-content: space-between;
   padding: 25px 20vw;
   background-color: #ffffff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
   height: 100px;
   position: relative;
   z-index: 10;

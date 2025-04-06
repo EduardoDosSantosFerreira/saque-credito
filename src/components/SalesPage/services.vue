@@ -4,7 +4,7 @@
     <p class="text-lg">Entenda como Funciona em 5 Passos</p>
   </div>
 
-  <div class="max-w-6xl mx-auto py-10 px-4">
+  <div id="funciona" class="max-w-6xl mx-auto py-10 px-4">
     <swiper
       :modules="[SwiperPagination, SwiperNavigation]"
       :slides-per-view="1"
