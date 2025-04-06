@@ -18,23 +18,15 @@
           <div class="p-4 flex flex-col justify-between flex-grow">
             <h2 class="text-xl font-bold">{{ post.titulo }}</h2>
             <p class="text-gray-700 text-sm my-2">{{ post.descricao }}</p>
-            <button
+            <a :href="post.whatsappLink"
               class="bg-green-600 text-white px-6 py-2 text-sm rounded-full flex items-center justify-center shadow-md hover:bg-green-700 transition">
               <font-awesome-icon :icon="['fas', 'plus-circle']" class="mr-2" />
               Saiba mais!
-            </button>
+            </a>
           </div>
         </div>
       </swiper-slide>
     </swiper>
-  </div>
-
-  <div class="text-center">
-    <button
-      class="border border-white text-white px-6 py-2 rounded-full flex items-center mx-auto shadow-lg hover:bg-white hover:text-green-600 transition">
-      <font-awesome-icon :icon="['fas', 'plus-circle']" class="mr-2" />
-      Conferir mais conteúdos
-    </button>
   </div>
 </template>
 
@@ -53,17 +45,20 @@ export default {
       {
         imagem: 'https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=600',
         titulo: 'O que é o Score?',
-        descricao: 'O Score é uma nota de 0 a 1.000 para quem tem CPF e atividade econômica. Calculado por inteligência artificial com dados financeiros, indica a situação financeira atual, baseada em hábitos e decisões, sem ser uma avaliação pessoal.'
+        descricao: 'O Score é uma nota de 0 a 1.000 para quem tem CPF e atividade econômica. Calculado por inteligência artificial com dados financeiros, indica a situação financeira atual, baseada em hábitos e decisões, sem ser uma avaliação pessoal.',
+        whatsappLink: 'https://wa.me/5521983192355?text=Quero%20saber%20mais%20sobre%20o%20Score'
       },
       {
         imagem: 'https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         titulo: 'Como o Banco Central cria dinheiro?',
-        descricao: 'O que a Selic tem a ver com isso? Descubra tudo sobre o sistema monetário.'
+        descricao: 'O que a Selic tem a ver com isso? Descubra tudo sobre o sistema monetário.',
+        whatsappLink: 'https://wa.me/5521983192355?text=Quero%20saber%20como%20o%20Banco%20Central%20cria%20dinheiro'
       },
       {
         imagem: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=600',
         titulo: 'Vale a pena parcelar no cartão?',
-        descricao: 'Descubra os prós e contras do parcelamento e se ele faz sentido para você.'
+        descricao: 'Descubra os prós e contras do parcelamento e se ele faz sentido para você.',
+        whatsappLink: 'https://wa.me/5521983192355?text=Quero%20saber%20se%20vale%20a%20pena%20parcelar%20no%20cartão'
       }
     ];
 

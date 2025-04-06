@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <button>
-      <a href="https://api.whatsapp.com/send?phone=5513991821461&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20plataforma%20do%20Rob%C3%B4%20Gestor.">
+      <a
+        href="https://api.whatsapp.com/send?phone=5513991821461&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20plataforma%20do%20Rob%C3%B4%20Gestor.">
         Agendar demonstração
       </a>
     </button>

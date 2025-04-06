@@ -34,8 +34,11 @@
   <div class="text-center">
     <button class="bg-green-600 text-white px-8 py-3 text-lg rounded-full flex items-center mx-auto shadow-lg hover:bg-green-700 transition">
       <font-awesome-icon :icon="['fas', 'play']" class="mr-2" />
-      Simular Agora
-    </button>
+      <a href="https://wa.me/5521983192355?text=Quero%20fazer%20uma%20simulação" 
+       class="bg-green-600 text-white px-8 py-3 text-lg rounded-full flex items-center mx-auto shadow-lg hover:bg-green-700 transition">
+        <font-awesome-icon :icon="['fas', 'play']" class="mr-2" />
+        Simular Agora
+    </a>    </button>
   </div>
 </template>
 

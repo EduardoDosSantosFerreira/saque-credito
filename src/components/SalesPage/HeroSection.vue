@@ -4,25 +4,41 @@
       <div class="grid">
         <!-- Texto e Call to Action -->
         <div class="text-content">
-          <h1 class="fade" ref="title">Precisando de <br> dinheiro?</h1>
-          <h4 class="fade" ref="subtitle">
-            Faça seu Limite do Cartão de Crédito virar DINHEIRO na sua Conta Agora Mesmo
+          <h1 class="fade title-animation" ref="title">Precisando de <br> dinheiro?</h1>
+          <h4 class="fade subtitle-animation" ref="subtitle">
+            Faça seu <span class="highlight-green">Limite do Cartão de Crédito</span> virar <span class="highlight-bold">DINHEIRO na sua Conta Agora Mesmo</span>
           </h4>
 
-          <!-- Avaliações -->
-          <div class="review">
-            <span class="reviews-count">(+ de 10.000 clientes satisfeitos)</span>
+          <!-- Benefícios -->
+          <div class="benefits">
+            <div class="benefit-item slide-in" ref="benefit1">
+              <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <p>Em poucos minutos, sem burocracia e sem precisar ter o nome limpo.</p>
+            </div>
+            <div class="benefit-item slide-in" ref="benefit2">
+              <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <p>Basta ter Limite Disponível no Seu Cartão de Crédito.</p>
+            </div>
           </div>
 
           <!-- Botão de Call to Action -->
-          <a href="https://api.whatsapp.com/send/?phone=5521983192355&text=Olá,%20gostaria%20de%20simular%20meu%20crédito%20consignado!" target="_blank">
-            <button class="cta-button">FALE CONOSCO</button>
+          <a :href="whatsappLink" target="_blank">
+            <button class="cta-button pulse-animation" ref="ctaButton">
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              Ver como funciona
+            </button>
           </a>
         </div>
 
         <!-- Imagem -->
         <div class="image-wrapper">
-          <img class="hero-image fade" ref="heroImage" src="@/assets/img/muie.png" alt="Imagem do Hero Section" />
+          <img class="hero-image fade-image" ref="heroImage" src="@/assets/img/muie.png" alt="Imagem do Hero Section" />
         </div>
       </div>
     </div>
@@ -32,18 +48,45 @@
 <script>
 export default {
   name: "HeroSection",
+  data() {
+    return {
+      whatsappNumber: '5521983192355',
+      whatsappMessage: 'Olá, gostaria de solicitar meu crédito',
+    };
+  },
+  computed: {
+    whatsappLink() {
+      return `https://api.whatsapp.com/send?phone=${this.whatsappNumber}&text=${encodeURIComponent(this.whatsappMessage)}`;
+    },
+  },
   mounted() {
+    // Animação do título
     setTimeout(() => {
       this.$refs.title.classList.add("visible");
     }, 200);
 
+    // Animação do subtítulo
     setTimeout(() => {
       this.$refs.subtitle.classList.add("visible");
     }, 400);
 
+    // Animação dos benefícios
+    setTimeout(() => {
+      this.$refs.benefit1.classList.add("visible");
+    }, 600);
+    setTimeout(() => {
+      this.$refs.benefit2.classList.add("visible");
+    }, 800);
+
+    // Animação da imagem
     setTimeout(() => {
       this.$refs.heroImage.classList.add("visible");
-    }, 600);
+    }, 1000);
+
+    // Animação do botão
+    setTimeout(() => {
+      this.$refs.ctaButton.classList.add("visible");
+    }, 1200);
   },
 };
 </script>
@@ -55,10 +98,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  padding: 4rem 0;
+  min-height: 80vh;
+  padding: 2rem 0;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Container */
@@ -74,75 +116,91 @@ export default {
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    text-align: left;
   }
 }
 
 /* Textos */
+.text-content {
+  text-align: left;
+  padding: 1rem;
+}
+
 h1 {
-  font-size: 3.5rem; /* Aumentado de 3rem para 3.5rem */
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
   color: #000000;
-}
-
-h4 {
-  font-size: 1.5rem; /* Aumentado de 1.25rem para 1.5rem */
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #000000;
-}
-
-/* Reviews */
-.review {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
-  .review {
-    justify-content: flex-start;
+  h1 {
+    font-size: 4rem;
   }
 }
 
-.reviews-count {
-  font-size: 1.2rem; /* Aumentado de 1rem para 1.2rem */
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
   color: #000000;
-  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-green {
+  color: #2ebc73;
+}
+
+.highlight-bold {
+  font-weight: 700;
+}
+
+/* Benefícios */
+.benefits {
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  opacity: 0;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  color: #2ebc73;
 }
 
 /* Botão de Ação */
 .cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: #2ebc73;
   color: white;
-  font-weight: 700;
-  font-size: 1.2rem; /* Aumentado de 1rem para 1.2rem */
-  padding: 14px 28px; /* Ajustado proporcionalmente */
-  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 
-.cta-button:hover {
-  background-color: #188f53;
-  transform: scale(1.05);
-}
-
-.cta-button:active {
-  transform: scale(0.98);
+.arrow-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Imagem */
@@ -153,54 +211,119 @@ h4 {
 
 .hero-image {
   width: 100%;
-  max-width: 600px; /* Aumentado de 500px para 600px */
-  border-radius: 8px;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
-.hero-image:hover {
-  transform: scale(1.05);
-}
+/* Animações */
 
-/* Fade-in animation */
-.fade {
+/* Fade para a imagem */
+.fade-image {
   opacity: 0;
-  transform: translateY(20px);
+  transform: scale(0.9);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-.fade.visible {
+.fade-image.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
+}
+
+/* Animação de "typing" para o título */
+.title-animation {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #2ebc73;
+  animation: typing 2s steps(30, end) forwards, blink 0.5s step-end infinite;
+}
+
+.title-animation.visible {
+  opacity: 1;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Slide-in para o subtítulo e benefícios */
+.subtitle-animation,
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.subtitle-animation.visible,
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Pulse para o botão */
+.pulse-animation {
+  opacity: 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.pulse-animation.visible {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
+    min-height: auto;
     padding: 2rem 0;
   }
 
+  .text-content {
+    text-align: center;
+  }
+
   h1 {
-    font-size: 3rem; /* Aumentado de 2.5rem para 3rem */
+    font-size: 2.5rem;
   }
 
   h4 {
-    font-size: 1.3rem; /* Aumentado de 1.1rem para 1.3rem */
+    font-size: 1.1rem;
   }
 
-  .reviews-count {
-    font-size: 1.1rem; /* Aumentado proporcionalmente */
+  .benefit-item {
+    font-size: 0.9rem;
   }
 
   .cta-button {
     width: 100%;
-    padding: 12px 0;
-    font-size: 1.1rem; /* Aumentado proporcionalmente */
+    justify-content: center;
+    padding: 0.75rem 0;
   }
 
   .hero-image {
-    max-width: 450px; /* Ajustado para telas menores, mas ainda maior que o original */
+    max-width: 300px;
   }
 }
 </style>

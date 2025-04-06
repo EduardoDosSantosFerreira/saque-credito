@@ -38,52 +38,51 @@ export default {
 </script>
 
 <style scoped>
+main {
+  overflow: hidden;
+}
 
-  main {
-    overflow: hidden;
-  }
-
-  hr {
-    border: 0;
+hr {
+  border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, transparent, #8a8a8a, transparent);  
+  background-image: linear-gradient(to right, transparent, #8a8a8a, transparent);
 }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    padding: 7vh 5vw 3vh 5vw;
-    margin-bottom: 5vh;
-  }
-
-  #fox {
-    display: flex;
-    flex-direction: column;
-    padding-right: 2vw;
-  }
-
-  .pc-button {
-    display: flex;
-    animation: pc-button 2s ease 0s 1 normal forwards;
-  }
-
-  @keyframes pc-button {
-	0% {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 7vh 5vw 3vh 5vw;
+  margin-bottom: 5vh;
 }
 
-  .pc-button-mb {
-    display: none;
+#fox {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2vw;
+}
+
+.pc-button {
+  display: flex;
+  animation: pc-button 2s ease 0s 1 normal forwards;
+}
+
+@keyframes pc-button {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
   }
 
-  @media (max-width: 1000px) {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pc-button-mb {
+  display: none;
+}
+
+@media (max-width: 1000px) {
 
   .container {
     display: flex;
@@ -121,7 +120,7 @@ export default {
     margin-top: 30px;
   }
 
-.pc-button {
+  .pc-button {
     display: none;
   }
 

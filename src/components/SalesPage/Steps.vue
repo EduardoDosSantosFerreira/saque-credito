@@ -2,9 +2,9 @@
   <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl"> O que os clientes falam sobre a  <span
-            class="text-green-600">Saque Crédito</span>
-          </h2>
+        <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl"> O que os clientes falam
+          sobre a <span class="text-green-600">Saque Crédito</span>
+        </h2>
       </div>
 
       <div
@@ -70,7 +70,8 @@
               </div>
             </div>
             <blockquote class="mt-7">
-              <p class="text-lg text-black">Um ótimo atendimento não só pelo WhatsApp como pessoalmente, o dinheiro cai na conta
+              <p class="text-lg text-black">Um ótimo atendimento não só pelo WhatsApp como pessoalmente, o dinheiro cai
+                na conta
                 em minutos eu indico de olhos fechados.</p>
             </blockquote>
             <p class="text-base font-semibold tex-tblack mt-9">Cristina Silva</p>

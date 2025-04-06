@@ -82,7 +82,8 @@
                         investidos pela Funses1. Conheça nossas vagas e junte-se a nós para transformar a experiência do
                         crédito.
                     </p>
-                    <a href="#" class="careers-cta">
+                    <a href="https://wa.me/5521983192355?text=Quero%20falar%20sobre%20vagas%20e%20oportunidades%20da%20saque-crédito"
+                        class="careers-cta">
                         Conheça Nossas Vagas
                     </a>
                 </div>
@@ -97,9 +98,12 @@
     <section class="pt-10 bg-gray-100 sm:pt-16 lg:pt-24">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">VenhaFazer parte da Nossa Equipe!</h2>
-                <p class="mt-6 text-lg text-gray-900">Conheça nossas vagas e junte-se a nós para transformar a experiência do crédito.</p>
-                <a href="#" title=""
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
+                    VenhaFazer parte da Nossa Equipe!</h2>
+                <p class="mt-6 text-lg text-gray-900">Conheça nossas vagas e junte-se a nós para transformar a
+                    experiência do crédito.</p>
+                <a href="https://wa.me/5521983192355?text=Quero%20falar%20sobre%20vagas%20e%20oportunidades%20da%20saque-crédito"
+                    title=""
                     class="inline-flex items-center justify-center px-6 py-4 mt-12 text-base font-semibold text-white transition-all duration-200 bg-green-600 border border-transparent rounded-md hover:bg-green-700 focus:bg-green-700"
                     role="button">
                     <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -117,7 +121,6 @@
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/team/4/group-of-people.png" alt="" />
         </div>
     </section>
-
 </template>
 
 <style scoped>
@@ -372,4 +375,109 @@
     margin: 0 auto;
     display: block;
 }
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* HERO SECTION */
+.hero-section h1,
+.hero-section p,
+.hero-section a {
+  animation: fadeUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-section h1 {
+  animation-delay: 0.2s;
+}
+.hero-section p {
+  animation-delay: 0.4s;
+}
+.hero-section a {
+  animation-delay: 0.6s;
+}
+
+.hero-image img {
+  animation: zoomIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* STATS */
+.stats-item,
+.stats-container .stat-item {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.stats-container .stat-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.stats-container .stat-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* VALORES */
+.values-item {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.values-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.values-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.values-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.values-image {
+  animation: zoomIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* CARREERS */
+.careers-title,
+.careers-description,
+.careers-cta {
+  animation: fadeUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+.careers-title {
+  animation-delay: 0.2s;
+}
+.careers-description {
+  animation-delay: 0.4s;
+}
+.careers-cta {
+  animation-delay: 0.6s;
+}
+
+.careers-image img {
+  animation: zoomIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+
+
 </style>

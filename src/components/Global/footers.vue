@@ -1,13 +1,20 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
+      <!-- Seção da Logo no Topo -->
+      <div class="footer-logo-section">
+        <img src="../../assets/img/saquecreditologo.png" alt="Logo Saque Crédito" class="footer-logo" />
+        <br><br>
+      </div>
+
       <!-- Grid Principal -->
       <div class="footer-grid">
         <!-- Institucional -->
         <div class="footer-section">
           <h3 class="footer-title">INSTITUCIONAL</h3>
           <ul class="footer-links">
-            <li><router-link to="/politicas-de-privacidade" class="footer-link">Política de privacidade</router-link></li>
+            <li><router-link to="/politicas-de-privacidade" class="footer-link">Política de privacidade</router-link>
+            </li>
             <li><router-link to="/politicas-de-cookies" class="footer-link">Política de cookies</router-link></li>
             <li><router-link to="/politicas-de-seguranca" class="footer-link">Política de segurança</router-link></li>
             <li><router-link to="/termos-de-uso" class="footer-link">Termos de Uso</router-link></li>
@@ -39,13 +46,14 @@
       <!-- Informações Legais -->
       <div class="footer-legal">
         <p>
-          Em acordo com as diretrizes do BACEN, nos termos da Resolução nº 3.954 de 24 de fevereiro de 2011. Somos correspondentes bancários autorizados.
+          Em acordo com as diretrizes do BACEN, nos termos da Resolução nº 3.954 de 24 de fevereiro de 2011. Somos
+          correspondentes bancários autorizados.
         </p>
         <p class="mt-2">
           <span class="font-bold">SAQUE INTERMEDIAÇÃO DE PAGAMENTOS E NEGÓCIOS LTDA</span><br>
           CNPJ: 55.173.878/0001-10<br>
           Rua Gil Veloso, nº11, Loja B, Campo Grande, Cariacica – ES<br>
-          Todos os direitos reservados à Saque Crédito #2024
+          Todos os direitos reservados à Saque Crédito #2025
         </p>
       </div>
     </div>
@@ -82,22 +90,28 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #1f9b5b;
+  background: linear-gradient(135deg, #1f9b5b 0%, #167a45 100%);
+  /* Gradiente para um visual mais dinâmico */
   color: white;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
+  /* Aumentei o padding para mais espaço */
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  /* Sombra suave na parte superior */
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1280px;
+  /* Aumentei o max-width para um layout mais amplo */
   margin: 0 auto;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
+  /* Aumentei o gap para mais espaçamento */
   text-align: center;
 }
 
@@ -115,18 +129,55 @@ export default {
 }
 
 .footer-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  /* Aumentei o margin-bottom para mais separação */
+  padding: 1rem;
+  /* Adicionei padding para melhor espaçamento interno */
+  border-radius: 8px;
+  /* Bordas arredondadas para um visual mais moderno */
+  background: rgba(255, 255, 255, 0.05);
+  /* Fundo sutil para destacar as seções */
+  transition: transform 0.3s ease, background 0.3s ease;
+  /* Animação suave */
+}
+
+.footer-section:hover {
+  transform: translateY(-5px);
+  /* Efeito de elevação ao passar o mouse */
+  background: rgba(255, 255, 255, 0.1);
+  /* Fundo mais claro ao hover */
 }
 
 .footer-title {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  /* Aumentei o tamanho da fonte */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  /* Aumentei o espaçamento entre letras */
   color: #ffffff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  /* Borda mais visível */
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+  /* Linha decorativa embaixo do título */
+  transition: width 0.3s ease;
+}
+
+.footer-title:hover::after {
+  width: 100%;
+  /* Animação de expansão da linha ao hover */
 }
 
 .footer-links {
@@ -138,28 +189,59 @@ export default {
 .footer-link {
   color: #e0e0e0;
   text-decoration: none;
-  font-size: 0.875rem;
-  line-height: 1.75rem;
-  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  /* Aumentei um pouco o tamanho da fonte */
+  line-height: 2rem;
+  /* Aumentei o espaçamento entre linhas */
+  transition: color 0.3s ease, transform 0.3s ease;
   display: inline-block;
+  position: relative;
 }
 
 .footer-link:hover {
   color: #ffffff;
-  transform: translateX(5px);
-  text-decoration: underline;
+  transform: translateX(8px);
+  /* Aumentei o deslocamento ao hover */
+  text-decoration: none;
+  /* Removi o sublinhado padrão */
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+  /* Efeito de sublinhado animado ao hover */
 }
 
 .footer-text {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.75rem;
+  /* Aumentei o espaçamento entre linhas */
   color: #e0e0e0;
+  opacity: 0.9;
+  /* Adicionei uma leve transparência */
+  transition: opacity 0.3s ease;
+}
+
+.footer-text:hover {
+  opacity: 1;
+  /* Torna o texto mais visível ao hover */
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
+  /* Aumentei o gap para mais espaçamento */
 }
 
 @media (min-width: 1024px) {
@@ -170,48 +252,81 @@ export default {
 
 .social-icon {
   color: #ffffff;
-  font-size: 1.75rem;
-  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 2rem;
+  /* Aumentei o tamanho dos ícones */
+  transition: color 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  /* Sombra nos ícones */
 }
 
 .social-icon:hover {
-  color: #d1d1d1;
-  transform: scale(1.1);
+  color: #f0f0f0;
+  /* Cor mais clara ao hover */
+  transform: scale(1.2) rotate(10deg);
+  /* Efeito de escala e rotação */
 }
 
 .footer-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  /* Aumentei a opacidade da linha */
+  margin: 3rem 0;
+  /* Aumentei o margin para mais separação */
+  position: relative;
+}
+
+.footer-divider::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+  /* Detalhe decorativo no centro da linha */
 }
 
 .footer-legal {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: #e0e0e0;
-  line-height: 1.5;
-  padding: 0 1rem;
+  line-height: 1.75;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  /* Fundo sutil para destacar */
+  border-radius: 8px;
 }
 
 .footer-legal p {
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  /* Aumentei a distância do fundo */
+  right: 30px;
   z-index: 1000;
 }
 
 .whatsapp-float img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  /* Aumentei o tamanho do ícone */
+  height: 70px;
   border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  /* Sombra mais pronunciada */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  background: #25D366;
+  /* Fundo verde do WhatsApp */
+  padding: 10px;
+  /* Adicionei padding para um visual mais integrado */
 }
 
 .whatsapp-float img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
+  /* Efeito de escala e rotação ao hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  /* Sombra mais intensa ao hover */
 }
 </style>

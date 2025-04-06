@@ -170,6 +170,7 @@ const whatsappLink = computed(() => {
 
 /* Responsivo */
 @media (max-width: 768px) {
+
   .nav-desktop,
   .desktop-only {
     display: none;
