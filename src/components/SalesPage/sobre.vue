@@ -1,5 +1,5 @@
 <template>
-    <div class="saque-credito-page">
+    <div id="sobre" class="saque-credito-page">
         <!-- Seção Hero -->
         <section class="hero-section">
             <div class="hero-container">
@@ -72,7 +72,7 @@
 
         <!-- Seção de Trabalho -->
         <section class="careers-section">
-            <div class="careers-container">
+            <div id="parceiro" class="careers-container">
                 <div class="careers-text">
                     <h2 class="careers-title">
                         Trabalhe na Saque Crédito

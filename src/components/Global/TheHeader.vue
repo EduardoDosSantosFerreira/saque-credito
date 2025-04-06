@@ -16,7 +16,7 @@
     </nav>
 
     <!-- Botão Destacado Desktop -->
-    <a href="#" class="cta-button desktop-only">Solicite seu Crédito</a>
+    <a :href="whatsappLink" target="_blank" class="cta-button desktop-only">Solicite seu Crédito</a>
 
     <!-- Ícone do menu hambúrguer -->
     <div class="hamburger" @click="toggleMenu">
@@ -31,19 +31,28 @@
       <a href="#" class="mobile-link">Como funciona?</a>
       <a href="#" class="mobile-link">Dúvidas</a>
       <a href="#" class="mobile-link">Seja Parceiro</a>
-      <a href="#" class="cta-button mobile-button">Solicite seu Crédito</a>
+      <a :href="whatsappLink" target="_blank" class="cta-button mobile-button">Solicite seu Crédito</a>
     </div>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue';
 
-const isMenuOpen = ref(false)
+// Estado do menu mobile
+const isMenuOpen = ref(false);
 
+// Função para alternar o menu
 function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value
+  isMenuOpen.value = !isMenuOpen.value;
 }
+
+// Link do WhatsApp com número e mensagem
+const whatsappNumber = '5521983192355'; // Número no formato internacional (55 + DDD + número)
+const whatsappMessage = 'Olá, gostaria de solicitar meu crédito';
+const whatsappLink = computed(() => {
+  return `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+});
 </script>
 
 <style scoped>
