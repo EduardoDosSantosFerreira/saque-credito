@@ -13,9 +13,9 @@ export default {
 <template>
 
   <TheHeader />
-  <h1>Como Funciona Esta Plataforma</h1>
-
+  
   <section>
+    <h2>Como Funciona Esta Plataforma</h2>
     <p>
       Fizemos o máximo para reduzir e simplificar as regras da nossa plataforma. Por isso, separamos abaixo os pontos
       mais importantes para você, que também podem ser lidos de forma bem completa e detalhada nos
@@ -305,8 +305,7 @@ export default {
       <li>8.2.5. Responsabilizar-se pelas operações efetuadas na Plataforma mediante o uso do seu login e senha e dos
         dados fornecidos no autoatendimento, caso tenha escolhido ser atendido pelo Whatsapp;</li>
       <li>8.2.6. Fornecer e manter informações exatas, corretas, precisas, verdadeiras, atuais e completas, eximindo a
-        <b>SAQUE CRÉDITO</b> de qualquer responsabilidade nesse sentido;
-      </li>
+        <b>SAQUE CRÉDITO</b> de qualquer responsabilidade nesse sentido;</li>
       <li>8.2.7. Manter o sigilo dos dados de acesso à Plataforma;</li>
       <li>8.2.8. Conhecer plenamente o funcionamento da Plataforma, bem como os riscos envolvidos na sua utilização,
         sendo que o Usuário deve ter plena capacidade e competência para realizar as operações;</li>
@@ -423,8 +422,7 @@ export default {
     <p>13.3. Os Usuários declaram que não constam nos históricos de crimes financeiros e que não se encontram
       enquadrados em listas restritivas, como a <b>Specially Designated Nationals and Blocked Persons</b> (SDN) e
       <b>Office of Foreign Assets Control</b> (OFAC) ou qualquer lista de natureza similar promulgada por qualquer outra
-      jurisdição relevante.
-    </p>
+      jurisdição relevante.</p>
     <p>13.3.1. Os Usuários se comprometem a realizar <b>Due Diligence</b> de terceiros, sejam eles clientes,
       fornecedores ou parceiros, principalmente aos que se enquadrem como Pessoas Expostas Politicamente (PEP’s),
       conforme definição do Conselho de Controle de Atividades Financeiras (COAF), a partir da Resolução n. 29 de 217.
@@ -498,46 +496,160 @@ export default {
 </template>
 
 <style scoped>
-.container {
-  width: 70%;
-  margin: 0 auto;
-  background: white;
-  padding: 20px;
-  text-align: left;
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1,
-h2 {
+/* TIPOGRAFIA GERAL */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif; /* Adicionei Inter como preferência */
+  font-size: 1rem; /* 16px padrão */
+  line-height: 1.6;
+  color: #222;
+  background-color: #f4f4f4; /* Um cinza mais suave */
+  padding: clamp(1rem, 5vw, 2rem); /* Padding responsivo */
+  min-height: 100vh; /* Garante altura mínima para layouts */
+}
+
+/* CONTAINER GERAL PARA CENTRALIZAÇÃO */
+main {
+  max-width: 1200px; /* Limite máximo para conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* ESTILIZAÇÃO DAS SEÇÕES */
+section {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Borda mais suave */
+  border-radius: 12px; /* Bordas mais arredondadas */
+  padding: clamp(1.5rem, 4vw, 2rem); /* Padding responsivo */
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Para possíveis elementos absolutos internos */
+}
+
+/* EFEITO HOVER NAS SEÇÕES */
+section:hover {
+  transform: translateY(-6px); /* Elevação mais perceptível */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULOS DAS SEÇÕES */
+section h2 {
+  font-size: clamp(1.5rem, 5vw, 1.75rem); /* Tamanho responsivo */
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  font-weight: 600; /* Mais controle sobre peso da fonte */
+}
+
+/* SUBTÍTULOS */
+section h3 {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin-bottom: 0.75rem;
   color: #333;
+  font-weight: 500;
 }
 
-p {
-  margin: 20px 0;
+/* PARÁGRAFOS */
+section p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.8; /* Maior legibilidade */
 }
 
-h1 {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 32px;
+/* DESTAQUES EM NEGRITO */
+section b {
   font-weight: 700;
+  color: #111;
 }
 
-h2 {
-  font-size: 22px;
-  padding-bottom: 10px;
+/* LISTAS DENTRO DAS SEÇÕES */
+section ul,
+section ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
 }
 
-@media (max-width: 500px) {
-  .container {
-    width: 90%;
+section li {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* LINKS DENTRO DAS SEÇÕES */
+section a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+section a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* ESTILOS PARA BOTÕES DENTRO DAS SEÇÕES */
+section button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+section button:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+/* IMAGENS DENTRO DAS SEÇÕES */
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
   }
 
-  h1 {
-    font-size: 24px;
+  section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  h2 {
-    font-size: 20px;
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  section p {
+    font-size: 0.9375rem; /* 15px para telas pequenas */
   }
 }
 </style>

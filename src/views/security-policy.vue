@@ -729,4 +729,164 @@
     </section>
 
   </div>
+
 </template>
+
+<style scoped>
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFIA GERAL */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif; /* Adicionei Inter como preferência */
+  font-size: 1rem; /* 16px padrão */
+  line-height: 1.6;
+  color: #222;
+  background-color: #f4f4f4; /* Um cinza mais suave */
+  padding: clamp(1rem, 5vw, 2rem); /* Padding responsivo */
+  min-height: 100vh; /* Garante altura mínima para layouts */
+}
+
+/* CONTAINER GERAL PARA CENTRALIZAÇÃO */
+main {
+  max-width: 1200px; /* Limite máximo para conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* ESTILIZAÇÃO DAS SEÇÕES */
+section {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Borda mais suave */
+  border-radius: 12px; /* Bordas mais arredondadas */
+  padding: clamp(1.5rem, 4vw, 2rem); /* Padding responsivo */
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Para possíveis elementos absolutos internos */
+}
+
+/* EFEITO HOVER NAS SEÇÕES */
+section:hover {
+  transform: translateY(-6px); /* Elevação mais perceptível */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULOS DAS SEÇÕES */
+section h2 {
+  font-size: clamp(1.5rem, 5vw, 1.75rem); /* Tamanho responsivo */
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  font-weight: 600; /* Mais controle sobre peso da fonte */
+}
+
+/* SUBTÍTULOS */
+section h3 {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* PARÁGRAFOS */
+section p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.8; /* Maior legibilidade */
+}
+
+/* DESTAQUES EM NEGRITO */
+section b {
+  font-weight: 700;
+  color: #111;
+}
+
+/* LISTAS DENTRO DAS SEÇÕES */
+section ul,
+section ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+section li {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* LINKS DENTRO DAS SEÇÕES */
+section a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+section a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* ESTILOS PARA BOTÕES DENTRO DAS SEÇÕES */
+section button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+section button:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+/* IMAGENS DENTRO DAS SEÇÕES */
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  section p {
+    font-size: 0.9375rem; /* 15px para telas pequenas */
+  }
+}
+</style>

@@ -211,7 +211,7 @@ h4 {
 
 .hero-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 550px;
   border-radius: 10px;
 }
 
